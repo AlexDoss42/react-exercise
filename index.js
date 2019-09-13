@@ -47,8 +47,11 @@ function jsonResponse(req, res, next) {
 }
 
 const server = app.listen(3000, () => {
-  const host = server.address().address,
-    port = server.address().port;
+  const 
+        // host = server.address().address,
+        host = 'localhost'
+        port = server.address().port;
+  console.log(server.address())
 
   console.log('API listening at http://%s:%s', host, port);
 });
